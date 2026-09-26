@@ -1,23 +1,85 @@
 aid: ascent-platform
+
 name: Ascent Platform
-description: 'Ascent Platform is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Ascent Platform provides a unified data foundation for financial institutions, enabling banks and credit unions to integrate and
+  automate workflows across onboarding, lending, servicing, and AI-driven insights. Their platform connects disparate systems, eliminates data
+  silos, and offers configurable AI to surface actionable insights, improving decision-making and operational efficiency for modern banking.
+
 url: https://raw.githubusercontent.com/api-evangelist/ascent-platform/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- FinTech
+- Banking
+- Data Integration
+- AI
+- Workflow Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/ascent-platform-llms.txt
+- type: MCPServer
+  url: mcp/ascent-platform-mcp.yml
+- type: WellKnown
+  url: well-known/ascent-platform-well-known.yml
+- type: Hosts
+  url: hosts/ascent-platform-hosts.yml
+- type: Vendors
+  url: vendors/ascent-platform-vendors.yml
+- type: StatusPage
+  url: https://status.ascentplatform.io/
+- type: Login
+  url: https://app.ascentplatform.io/login
+- type: GettingStarted
+  url: https://docs.ascentplatform.io/getting-started/logging-into-the-portal
+- type: Documentation
+  url: https://docs.ascentplatform.io/
+- type: GitHubOrganization
+  url: https://github.com/AscentPlatform
+- type: DomainSecurity
+  url: security/ascent-platform-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://ascentplatform.io
+
+apis:
+- name: Ascent Platform API
+  description: Unified data foundation for financial institutions, enabling integration and automation of onboarding, lending, servicing, and
+    AI-driven insights.
+  humanURL: https://docs.ascentplatform.io/
+  baseURL: null
+  aid: ascent-platform:ascent-platform-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs are served as a JavaScript application, preventing machine‑readable spec discovery.
+  evidence:
+  - url: https://docs.ascentplatform.io/
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

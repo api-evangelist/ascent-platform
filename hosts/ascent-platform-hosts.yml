@@ -1,0 +1,92 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - identity
+  - source
+  - status
+  - website
+hosts:
+- host: api.ascentplatform.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ascentplatform.io
+  role: api
+  relation: own
+- host: app.ascentplatform.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: ascentplatform.io
+  role: identity
+  relation: own
+- host: ascentplatform.io
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: netlify
+  registrable_domain: ascentplatform.io
+  role: website
+  relation: own
+- host: docs.ascentplatform.io
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - GettingStarted
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: ascentplatform.io
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: status.ascentplatform.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: ascentplatform.io
+  role: status
+  relation: own

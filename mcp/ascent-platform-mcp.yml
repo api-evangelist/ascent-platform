@@ -1,0 +1,9 @@
+generated: 2026-09-26
+method: probed
+type: MCPServer
+source: https://api.ascentplatform.io/mcp
+deployment:
+  mode: remote
+  endpoint: https://api.ascentplatform.io/mcp
+  auth: unknown
+  verified: probed
