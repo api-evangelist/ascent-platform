@@ -1,0 +1,20 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/ascent-platform/integrations
+- https://zapier.com/apps/ascent/integrations
+- https://n8n.io/integrations/ascent-platform/
+- https://n8n.io/integrations/ascent/
+- https://composio.dev/toolkits/ascent-platform
+- https://monid.ai/tools/ascent-platform
+checked:
+- https://composio.dev/toolkits/ascent-platform
+- https://monid.ai/tools/ascent-platform
+- https://n8n.io/integrations/ascent-platform/
+- https://n8n.io/integrations/ascent/
+- https://zapier.com/apps/ascent-platform/integrations
+- https://zapier.com/apps/ascent/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
